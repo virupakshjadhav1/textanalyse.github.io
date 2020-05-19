@@ -1,0 +1,65 @@
+
+<!-- in the template  in setting we have to declare templates(folder)  -->
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		h1 {
+    			font-family: cursive;
+    			
+    			color: brown;
+            }
+        body 
+           {
+                background-color: aqua;
+            }
+        button 
+            {
+    			border: cornsilk;
+    			padding: 6px;
+    			margin: 0px;
+    			color: brown;
+    			background-color: #05b4c5;
+            }
+            form 
+            {
+    			font-size: xx-large;
+            }
+            textarea {
+                  background-color: #08cde1;
+                      }
+
+
+
+	</style>
+
+
+
+
+	<title>Analysing Text</title>
+</head>
+<body>
+<h1>This is text analyser...BABA</h1>
+<form action='/analyse' method="post"> {% csrf_token %}
+	<h2>Enter the text Here.....</h2>
+ <textarea name = 'text'style='
+    margin: 0px;
+    width: 550px;
+    height: 151px;
+    font: unset;
+'></textarea><br>	
+
+<input type="radio" name= "removepunc">Remove Punctuations<br>
+<input type="radio" name= "uppercase">UPPERCASE<br>
+<input type="radio" name= "lowercase">LOWERCASE<br>
+<input type="radio" name= "countchar">Count character <br>
+
+
+<button type ="submit">Aanlysed</button>
+
+
+</form>
+
+
+</body>
+</html>
